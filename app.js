@@ -15,11 +15,15 @@ const scissors_div = document.getElementById("s");
   return choices[randomNumber];
 }
 
- console.log(getComputerChoice());
+ //console.log(getComputerChoice());
 
 function game( userChoice){
+	const computerChoice = getComputerChoice();
+	console.log("user choice =>" + userChoice);
+	console.log("computer choice =>" + computerChoice);
 	
 }
+
 
 
 function main(){
