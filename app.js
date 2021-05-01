@@ -25,7 +25,9 @@ const scissors_div = document.getElementById("s");
  	userScore++;
  	userScore_span.innerHTML = userScore;
  	computerScore_span.innerHTML = computerScore;
- 	result_p.innerHTML = convertToWord(userChoice) + " beats " + convertToWord(computerChoice) + ". You win! 🔥 ";
+ 	const smallUserWord = "user".fontsize(4).sub();
+ 	const smallCompWord = "comp".fontsize(4).sub();
+ 	result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} beats ${convertToWord(computerChoice)}${smallCompWord} You win! 🔥 "`;
 
  }
 
