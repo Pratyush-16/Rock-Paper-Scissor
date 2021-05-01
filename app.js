@@ -19,8 +19,27 @@ const scissors_div = document.getElementById("s");
 
 function game( userChoice){
 	const computerChoice = getComputerChoice();
-	console.log("user choice =>" + userChoice);
-	console.log("computer choice =>" + computerChoice);
+	//console.log("user choice =>" + userChoice);
+	//console.log("computer choice =>" + computerChoice);
+	switch(userChoice + computerChoice) {
+		case "rs":
+		case "pr":
+		case "sp":
+		 console.log("USER WINS.");
+		 break;
+
+		case "rp":
+		case "ps":
+		case "sr":
+		 console.log("USER LOSES");
+		 break;
+
+		case "rr":
+		case "pp":
+		case "ss":
+		 console.log("It's DRAW");
+		 break; 
+	}
 	
 }
 
