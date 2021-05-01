@@ -31,12 +31,19 @@ const scissors_div = document.getElementById("s");
 
  }
 
- function lose(){
- 	
+ function lose(userChoice, computerChoice){
+ 	computerScore++;
+ 	userScore_span.innerHTML = userScore;
+ 	computerScore_span.innerHTML = computerScore;
+ 	const smallUserWord = "user".fontsize(4).sub();
+ 	const smallCompWord = "comp".fontsize(4).sub();
+ 	result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} loses to ${convertToWord(computerChoice)}${smallCompWord} You Lost..💩"`;
  }
 
- function draw(){
- 	
+ function draw(userChoice, computerChoice){
+ 	const smallUserWord = "user".fontsize(4).sub();
+ 	const smallCompWord = "comp".fontsize(4).sub();
+ 	result_p.innerHTML = `${convertToWord(userChoice)}${smallUserWord} equals to ${convertToWord(computerChoice)}${smallCompWord} It's Draw..!"`;
  }
 
 function game( userChoice){
@@ -62,8 +69,6 @@ function game( userChoice){
 	}
 	
 }
-
-
 
 function main(){
 	rock_div.addEventListener('click', function(){
