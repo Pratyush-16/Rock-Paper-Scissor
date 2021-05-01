@@ -1,7 +1,7 @@
- const userScore = 0;
-const computerScore = 0;
-const userScore_span = document.getElementById("user_score");
-const computerScore_span = document.getElementById("computer_score");
+ let userScore = 0;
+let computerScore = 0;
+const userScore_span = document.getElementById("user-score");
+const computerScore_span = document.getElementById("computer-score");
 const scoreBoard_div = document.querySelector(".score-board");
 const result_div = document.querySelector(".result ");
 const rock_div = document.getElementById("r");
@@ -15,7 +15,20 @@ const scissors_div = document.getElementById("s");
   return choices[randomNumber];
 }
 
- //console.log(getComputerChoice());
+ function win(){
+ 	userScore++;
+ 	userScore_span.innerHTML = userScore;
+ 	computerScore_span.innerHTML = computerScore;
+
+ }
+
+ function lose(){
+ 	
+ }
+
+ function draw(){
+ 	
+ }
 
 function game( userChoice){
 	const computerChoice = getComputerChoice();
@@ -25,19 +38,19 @@ function game( userChoice){
 		case "rs":
 		case "pr":
 		case "sp":
-		 console.log("USER WINS.");
+		 win();
 		 break;
 
 		case "rp":
 		case "ps":
 		case "sr":
-		 console.log("USER LOSES");
+		 lose();
 		 break;
 
 		case "rr":
 		case "pp":
 		case "ss":
-		 console.log("It's DRAW");
+		 draw();
 		 break; 
 	}
 	
